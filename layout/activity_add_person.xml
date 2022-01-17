@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/new_secondary"
+    tools:context=".AddPerson">
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:textColor="@color/white"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/startView"
+            android:layout_width="match_parent"
+            android:layout_height="81dp"
+            android:background="@color/new_tertiary"
+            android:gravity="center"
+            android:padding="18dp"
+            android:text="ADD A NEW PERSON"
+            android:textColor="@color/item_color_white"
+            android:textSize="21dp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/add_person_form"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Enter Person Name"
+                app:layout_constraintTop_toBottomOf="@+id/startView"
+                tools:layout_editor_absoluteX="5dp" />
+
+            <EditText
+                android:id="@+id/addperson_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="text"
+                tools:layout_editor_absoluteY="313dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Contact number (optional)"
+                app:layout_constraintTop_toBottomOf="@+id/startView"
+                tools:layout_editor_absoluteX="5dp" />
+
+            <EditText
+                android:id="@+id/addperson_contact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="text"
+                tools:layout_editor_absoluteY="313dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Relationship (optional)"
+                app:layout_constraintTop_toBottomOf="@+id/startView"
+                tools:layout_editor_absoluteX="5dp" />
+
+            <EditText
+                android:id="@+id/addperson_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="text"
+                tools:layout_editor_absoluteY="313dp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/add_person_success_message"
+            android:layout_width="match_parent"
+            android:layout_height="70sp"
+            android:text="Person Saved"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            android:gravity="center"
+            android:textColor="@color/new_primary"
+            />
+
+        <Button
+            android:id="@+id/save_person_new"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="savePerson"
+            android:text="Save"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:id="@+id/add_person_next_form"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            >
+            <Button
+                android:id="@+id/add_pictures_new"
+                android:layout_width="150sp"
+                android:layout_height="55sp"
+                android:onClick="takePicture"
+                android:text="Add Pictures"
+                android:textSize="15sp" />
+
+            <Button
+                android:layout_marginLeft="10sp"
+                android:id="@+id/add_memories"
+                android:text="Add Memories"
+                android:layout_width="150sp"
+                android:layout_height="55sp"
+                android:onClick="addMemories"
+                android:textSize="15sp"/>
+
+        </LinearLayout>
+
+
+
+        <ImageView
+            android:id="@+id/addperson_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteX="160dp"
+            tools:layout_editor_absoluteY="365dp" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
